@@ -9,6 +9,15 @@ export default function Home() {
     return (
     <div>
         [home] The world is surging forward. Are you?
+
+        {[...new Array(120)]
+            .map(
+              () => `The world is surging forward. Are you? The world is surging forward. Are you? 
+              The world is surging forward. Are you? The world is surging forward. Are you? 
+              The world is surging forward. Are you? The world is surging forward. Are you? 
+              The world is surging forward. Are you? The world is surging forward. Are you? `,
+            )
+            .join('\n')}
     </div>
     )
 }
