@@ -15,8 +15,9 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import {Link} from 'react-router-dom'
 import MenuIcon from '@material-ui/icons/Menu';
-// import { makeStyles } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/styles'
+import Tabs from '@material-ui/core/tabs'
+import Tab from '@material-ui/core/tab'
 
 import logo from '../assets/logo.png'
 
@@ -31,9 +32,17 @@ const useStyles = makeStyles(theme => ({
   },
   logo: {
     height: '7em',
-    cursor: 'pointer'
+    cursor: 'pointer',
+  },
+  tabContainer: {
+    marginLeft: 'auto'
+  },
+  tab: {
+    ...theme.typography.tab
   }
 }));
+
+
 
 function ScrollTop(props) {
   const { children } = props;
@@ -64,7 +73,6 @@ function ScrollTop(props) {
 
 
 export default function Header(props) {
-// below not needed? connected to pushing content down
   const classes = useStyles();
 
 
@@ -82,13 +90,22 @@ export default function Header(props) {
       <CssBaseline />
       <AppBar color="w">
         <Toolbar>
-          {/* <Typography variant="h5" color="primary">Electrify</Typography> */}
+        <Link to="/">
           <img src={logo} className={classes.logo} alt="electrify-logo" component={Link} to="/"/>
-          <Button variant="contained" color="primary" component={Link} to="/">Cars</Button>
+        </Link>
+        <Tabs className={classes.tabContainer}>
+          <Tab className={classes.tab} label="Cars" />
+          <Tab className={classes.tab} label="Trucks" />
+          <Tab className={classes.tab} label="Why EV?" />
+          <Tab className={classes.tab} label="About Us" component={Link} to="/about/" />
+        </Tabs>
+
+
+          {/* <Button variant="contained" color="primary" component={Link} to="/">Cars</Button>
           <Button variant="contained" color="primary">Trucks</Button>
           <Button variant="contained" color="primary">Why EV?</Button>
           <Button variant="contained" color="primary">About Us</Button>
-          <Button variant="contained" color="primary">About Us</Button>
+          <Button variant="contained" color="primary">About Us</Button> */}
 
           <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
         <MenuIcon />
@@ -115,7 +132,6 @@ export default function Header(props) {
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>
-      {/* below pushes content down from header - not needed? */}
       <div className={classes.toolbarMargin} />
     </React.Fragment>
   );

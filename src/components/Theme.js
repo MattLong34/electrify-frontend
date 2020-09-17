@@ -16,6 +16,14 @@ export default createMuiTheme({
         main: `${lightOrange}`
     }
   },
+  typography: {
+    tab: {
+      fontFamily: 'Raleway',
+      fontSize: '1.5rem',
+      fontWeight: '500',
+      textTransform: 'none'
+    }
+  }
 });
 
 
