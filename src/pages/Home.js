@@ -4,20 +4,30 @@ import React from 'react'
 // import {Link} from 'react-router-dom'
 // import Resources from '../components/Resources'
 // import FeaturedTrails from '../components/FeaturedTrails'
+import Button from '@material-ui/core/Button';
+import {Link} from 'react-router-dom'
+
+import CAR from '../assets/CAR.svg'
 
 export default function Home() {
     return (
     <div>
-        [home] The world is surging forward. Are you?
-
-        {[...new Array(120)]
+        <h2>The world is surging forward. Are you?</h2>
+        <img src={CAR} className="car" />
+        <div>
+          <Button variant="outlined" color="primary" component={Link} to="/cars/">View Electric Cars</Button>
+          <Button variant="outlined" color="primary" component={Link} to="/trucks/">View Electric Trucks</Button>
+        </div>
+        <div>
+        {[...new Array(20)]
             .map(
               () => `The world is surging forward. Are you? The world is surging forward. Are you? 
               The world is surging forward. Are you? The world is surging forward. Are you? 
               The world is surging forward. Are you? The world is surging forward. Are you? 
               The world is surging forward. Are you? The world is surging forward. Are you? `,
-            )
-            .join('\n')}
+              )
+              .join('\n')}
+        </div>
     </div>
     )
 }
