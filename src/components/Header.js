@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -18,6 +18,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles } from '@material-ui/styles'
 import Tabs from '@material-ui/core/tabs'
 import Tab from '@material-ui/core/tab'
+
 
 import logo from '../assets/logo.png'
 
@@ -39,6 +40,9 @@ const useStyles = makeStyles(theme => ({
   },
   tab: {
     ...theme.typography.tab
+  },
+  tabButton: {
+    ...theme.typography.tabButton
   }
 }));
 
@@ -70,13 +74,38 @@ function ScrollTop(props) {
   );
 }
 
-
-
 export default function Header(props) {
   const classes = useStyles();
+  const [value, setValue] = useState(0)
 
+  const handleChange = (event, value) => {
+    setValue(value)
+  }
+  
+  const resetChange = (event, value) => {
+    setValue(0)
+  }
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
+  // useEffect(() => {
+  //   if (window.location.pathname === '/' && value !== 0) {
+  //     setValue(0)
+  //   } else if (window.location.pathname === '/cars' && value !== 1) {
+  //     setValue(1)
+  //   } else if (window.location.pathname === '/trucks' && value !== 2) {
+  //     setValue(2)
+  //   } else if (window.location.pathname === '/why-ev' && value !== 3) {
+  //     setValue(3)
+  //   } else if (window.location.pathname === '/about' && value !== 4) {
+  //     setValue(4)
+  //   }
+  // }, [value])
+  
+  // let test = "primary"
+  // function clearChange() {
+  //   let test = "primary"
+  // }
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -90,26 +119,26 @@ export default function Header(props) {
       <CssBaseline />
       <AppBar color="w">
         <Toolbar>
-        <Link to="/">
+        <Link onClick={resetChange} to="/">
           <img src={logo} className={classes.logo} alt="electrify-logo" component={Link} to="/"/>
         </Link>
-        <Tabs className={classes.tabContainer}>
-          <Tab className={classes.tab} label="Cars" />
-          <Tab className={classes.tab} label="Trucks" />
-          <Tab className={classes.tab} label="Why EV?" />
+        <Tabs 
+          value={value} 
+          onChange={handleChange} 
+          className={classes.tabContainer}
+          indicatorColor="primary"
+          >
+          <Tab className={classes.tab} label="Home" component={Link} to="/" />
+          <Tab className={classes.tab} label="Cars" component={Link} to="/cars/" />
+          <Tab className={classes.tab} label="Trucks" component={Link} to="/trucks/" />
+          <Tab className={classes.tab} label="Why EV?" component={Link} to="/why-ev/" />
           <Tab className={classes.tab} label="About Us" component={Link} to="/about/" />
         </Tabs>
 
+        <Button className={classes.tabButton} variant="contained" color="primary" component={Link} to="/compare/">Compare EV's</Button>
 
-          {/* <Button variant="contained" color="primary" component={Link} to="/">Cars</Button>
-          <Button variant="contained" color="primary">Trucks</Button>
-          <Button variant="contained" color="primary">Why EV?</Button>
-          <Button variant="contained" color="primary">About Us</Button>
-          <Button variant="contained" color="primary">About Us</Button> */}
-
-          <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        <MenuIcon />
-        </Button>
+        {/* <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}></Button> */}
+        {/* <MenuIcon /> */}
         <Menu
         id="simple-menu"
         anchorEl={anchorEl}

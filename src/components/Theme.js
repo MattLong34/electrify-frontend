@@ -1,19 +1,19 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
 const lightGreen = '#81c784'
-const lightOrange = '#ffb74d'
+const orange = '#F59300'
 
 export default createMuiTheme({
   palette: {
     common: {
         green: `${lightGreen}`,
-        orange: `${lightOrange}`,
+        orange: `${orange}`,
     },
     primary: {
         main: `${lightGreen}`,
     },
     secondary: {
-        main: `${lightOrange}`
+        main: `${orange}`
     }
   },
   typography: {
@@ -22,6 +22,16 @@ export default createMuiTheme({
       fontSize: '1.5rem',
       fontWeight: '500',
       textTransform: 'none'
+    },
+    tabButton: {
+      fontFamily: 'Raleway',
+      fontSize: '1.5rem',
+      fontWeight: '500',
+      textTransform: 'none',
+      borderRadius: '10px',
+      marginLeft: '50px',
+      marginRight: '25px',
+      height: '50px'
     }
   }
 });
