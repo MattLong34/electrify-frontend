@@ -3,43 +3,27 @@
   font-family: 'Raleway', sans-serif;
 }
 
-.car {
+.background {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;}
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  width: 50vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bot-army {
+  overflow-x: scroll;
+  min-height: 300px;
+  max-width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.ui.grid > .row.bot-army-row {
+  flex-wrap: nowrap;
+  min-height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+.ui.grid {
+  padding: 0px 20px;
+}
+
+
+

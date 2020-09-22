@@ -10,7 +10,7 @@ import TeslaCyberTruck from '../assets/TeslaCyberTruck.jpeg'
 export default function Trucks() {
     return (
     <div>
-        Trucks Page
+        <h2>Trucks Page</h2>
         <img src={TeslaCyberTruck} />
     </div>
     )
