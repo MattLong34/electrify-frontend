@@ -23,7 +23,7 @@ const result = props.carsArray.filter(vehicle => vehicle.category == "car");
     return (
       <div className="ui four column grid">
         <div className="row">
-          Collection of all cars
+            <h2>Electric Cars</h2>
           {showCars}
         </div>
       </div>

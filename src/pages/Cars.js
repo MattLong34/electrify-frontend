@@ -34,8 +34,8 @@ class Cars extends Component {
     
     render() {
         return <div>
-            <h2>Cars Page</h2>
-            <img src={AstonMartinRapideE} />
+            {/* <h2>Cars Page</h2> */}
+            {/* <img src={AstonMartinRapideE} /> */}
             <CarsCollection carsArray={this.state.carsArray}/>
 
         </div>
