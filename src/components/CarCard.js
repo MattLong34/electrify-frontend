@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-// add others from core next to Grid below?
 import { Grid, Button, Typography, Fab, Card, CardActionArea, CardActions, CardContent, CardMedia } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 
@@ -31,7 +30,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function VehicleCard(props) {
+export default function CarCard(props) {
     const { vehicle } = props
     const classes = useStyles();
 
@@ -49,7 +48,6 @@ export default function VehicleCard(props) {
                         component="img"
                         alt={vehicle.model}
                         height="140"
-                        // image={AstonMartinRapideE}
                         image={vehicle.link}
                         title={vehicle.model}
                         justify="center"

@@ -1,16 +1,16 @@
 import React from "react";
-import CarCard from './CarCard'
+import TruckCard from './TruckCard'
 
-function CarsCollection (props){
+function TrucksCollection (props){
 
 //   const showCars = props.carsArray.map(car => {
 //     return <VehicleCard vehicle={car} />
 // })
 
-const result = props.carsArray.filter(vehicle => vehicle.category === "car");
+const result = props.trucksArray.filter(vehicle => vehicle.category === "truck");
   
-  const showCars = result.map(car => {
-    return <CarCard vehicle={car} />
+  const showTrucks = result.map(truck => {
+    return <TruckCard vehicle={truck} />
 })
 
 // collectCars = (vehicle) => {
@@ -23,12 +23,12 @@ const result = props.carsArray.filter(vehicle => vehicle.category === "car");
     return (
       <div>
         <div>
-            <h2>Electric Cars</h2>
-          {showCars}
+            <h2>Electric Trucks</h2>
+          {showTrucks}
         </div>
       </div>
     );
   
 }
 
-export default CarsCollection;
+export default TrucksCollection;

@@ -1,12 +1,5 @@
 import React, { Component } from "react";
 import CarsCollection from '../components/CarsCollection'
-// import Hero from '../components/Hero'
-// import Banner from '../components/Banner'
-// import {Link} from 'react-router-dom'
-// import Resources from '../components/Resources'
-// import FeaturedTrails from '../components/FeaturedTrails'
-
-import AstonMartinRapideE from '../assets/AstonMartinRapideE.jpg'
 
 const baseURL = "http://localhost:3000/vehicles"
 
@@ -27,6 +20,7 @@ class Cars extends Component {
 
     collectCars = (vehicle) => {
         const allCars = this.state.allVehicles.filter(vehicle => vehicle.category == "car")
+        // const allCars = this.state.carsArray.filter(vehicle => vehicle.category == "car")
         this.setState({ 
           carsArray: allCars
         })
@@ -34,10 +28,7 @@ class Cars extends Component {
     
     render() {
         return <div>
-            {/* <h2>Cars Page</h2> */}
-            {/* <img src={AstonMartinRapideE} /> */}
             <CarsCollection carsArray={this.state.carsArray}/>
-
         </div>
     }
 }
