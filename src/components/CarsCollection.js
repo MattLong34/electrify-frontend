@@ -7,7 +7,7 @@ function CarsCollection (props){
 //     return <VehicleCard vehicle={car} />
 // })
 
-const result = props.carsArray.filter(vehicle => vehicle.category == "car");
+const result = props.carsArray.filter(vehicle => vehicle.category === "car");
   
   const showCars = result.map(car => {
     return <VehicleCard vehicle={car} />

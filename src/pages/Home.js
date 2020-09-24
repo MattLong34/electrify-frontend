@@ -18,11 +18,11 @@ export default function Home() {
         <img src={CAR} className="background" />
         {/* <img src={BackgroundOne} className="background" />
         <img src={Van} className="shake-vertical" /> */}
-        <div>
+        {/* <div>
           <Button variant="outlined" color="primary" component={Link} to="/cars/">View Electric Cars</Button>
           <Button variant="outlined" color="primary" component={Link} to="/trucks/">View Electric Trucks</Button>
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
         {[...new Array(20)]
             .map(
               () => `The world is surging forward. Are you? The world is surging forward. Are you? 
@@ -31,7 +31,7 @@ export default function Home() {
               The world is surging forward. Are you? The world is surging forward. Are you? `,
               )
               .join('\n')}
-        </div>
+        </div> */}
     </div>
     )
 }
