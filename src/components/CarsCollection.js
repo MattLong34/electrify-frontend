@@ -1,5 +1,7 @@
 import React from "react";
 import CarCard from './CarCard'
+import { Grid } from '@material-ui/core';
+
 
 function CarsCollection (props){
 
@@ -24,7 +26,9 @@ const result = props.carsArray.filter(vehicle => vehicle.category === "car");
       <div>
         <div>
             <h2>Electric Cars</h2>
-          {showCars}
+            <Grid container spacing={6} justify="center">
+                {showCars}
+            </Grid>
         </div>
       </div>
     );

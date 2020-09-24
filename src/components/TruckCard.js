@@ -35,9 +35,22 @@ export default function CarCard(props) {
     const classes = useStyles();
 
   return (
-    //   <div className={classes.root}>
-      <div>
-        Test Card {vehicle.model}
+      <div className={classes.root}>
+       {/* <div> */}
+        <Grid
+            container
+            direction="row"
+            justify="space-evenly"
+            alignItems="center"
+            >
+            <Grid item xs>
+                Test Card {vehicle.model}
+            </Grid>
+            <Grid item xs>
+                Test Card {vehicle.model}
+            </Grid>
+
+            </Grid>
     </div>
   );
 }
