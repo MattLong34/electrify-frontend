@@ -1,6 +1,7 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
 const lightGreen = "#81c784";
+const darkGreen = "#3F8D43";
 const orange = "#F59300";
 
 export default createMuiTheme({
@@ -8,12 +9,16 @@ export default createMuiTheme({
 		common: {
 			green: `${lightGreen}`,
 			orange: `${orange}`,
+			darkGreen: `${darkGreen}`,
 		},
 		primary: {
 			main: `${lightGreen}`,
 		},
 		secondary: {
 			main: `${orange}`,
+		},
+		tertiary: {
+			main: `${darkGreen}`,
 		},
 	},
 	typography: {
