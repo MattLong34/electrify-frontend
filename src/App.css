@@ -13,41 +13,41 @@
 	height: 5px;
 	background-color: black;
 	border: black;
-	top: -160px;
+	top: -360px;
 }
 
 .mountains {
 	position: relative;
 	width: 700px;
-	right: 165px;
-	top: -80px;
+	right: 850px;
+	top: 30px;
 }
 
 .car {
 	position: relative;
 	width: 100px;
-	left: -800px;
-	top: -125px;
+	left: -500px;
+	top: -325px;
 }
 
 .forest1 {
 	position: relative;
 	width: 300px;
-	right: 290px;
-	top: -130px;
+	right: -80px;
+	top: -330px;
 }
 
 .forest2 {
 	position: relative;
 	width: 300px;
-	top: -130px;
-	left: 15px;
+	top: -330px;
+	left: 350px;
 }
 
 .cloud {
 	position: relative;
 	width: 200px;
-	top: -750px;
+	top: -900px;
 	left: 350px;
 }
 

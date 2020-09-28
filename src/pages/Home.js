@@ -16,12 +16,16 @@ import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles({
 	title: {
+		position: "relative",
+		bottom: 650,
+		left: 350,
 		borderRadius: 10,
-		marginBottom: 50,
+		// marginBottom: 50,
 		padding: 10,
 		fontWeight: 800,
-		color: "#337136",
-		// backgroundColor: "green",
+		fontSize: 32,
+		// color: "#337136",
+		backgroundColor: "#EAEBEA",
 		// border: "1px solid black",
 	},
 });
@@ -31,7 +35,7 @@ export default function Home() {
 
 	return (
 		<div className="backdrop">
-			<Typography className={classes.title} variant="h4" color="">
+			<Typography className={classes.title} variant="p" color="secondary">
 				Your Home for Comparing Electric Vehicles
 			</Typography>
 			<img src={mountains} className="mountains" />
