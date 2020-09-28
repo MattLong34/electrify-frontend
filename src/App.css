@@ -1,6 +1,103 @@
 .App {
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
+	text-align: center;
+	font-family: "Raleway", sans-serif;
 }
 
+/* .backdrop {
+	background-color: lightskyblue;
+	padding-top: 100px;
+} */
 
+.hr {
+	position: relative;
+	height: 5px;
+	background-color: black;
+	border: black;
+	top: -160px;
+}
+
+.mountains {
+	position: relative;
+	width: 700px;
+	right: 220px;
+	top: -80px;
+}
+
+.forest1 {
+	position: relative;
+	width: 300px;
+	right: 270px;
+	top: -130px;
+}
+
+.forest2 {
+	position: relative;
+	width: 300px;
+	top: -130px;
+	left: 100px;
+}
+
+.cloud {
+	position: relative;
+	width: 200px;
+	top: -750px;
+	left: 350px;
+}
+
+.vibrate-1 {
+	-webkit-animation: vibrate-1 5s linear infinite both;
+	animation: vibrate-1 5s linear infinite both;
+}
+
+@-webkit-keyframes vibrate-1 {
+	0% {
+		-webkit-transform: translate(0);
+		transform: translate(0);
+	}
+	20% {
+		-webkit-transform: translate(-6px, 6px);
+		transform: translate(-6px, 6px);
+	}
+	40% {
+		-webkit-transform: translate(-6px, -6px);
+		transform: translate(-6px, -6px);
+	}
+	60% {
+		-webkit-transform: translate(6px, 6px);
+		transform: translate(6px, 6px);
+	}
+	80% {
+		-webkit-transform: translate(6px, -6px);
+		transform: translate(6px, -6px);
+	}
+	100% {
+		-webkit-transform: translate(0);
+		transform: translate(0);
+	}
+}
+@keyframes vibrate-1 {
+	0% {
+		-webkit-transform: translate(0);
+		transform: translate(0);
+	}
+	20% {
+		-webkit-transform: translate(-6px, 6px);
+		transform: translate(-6px, 6px);
+	}
+	40% {
+		-webkit-transform: translate(-6px, -6px);
+		transform: translate(-6px, -6px);
+	}
+	60% {
+		-webkit-transform: translate(6px, 6px);
+		transform: translate(6px, 6px);
+	}
+	80% {
+		-webkit-transform: translate(6px, -6px);
+		transform: translate(6px, -6px);
+	}
+	100% {
+		-webkit-transform: translate(0);
+		transform: translate(0);
+	}
+}

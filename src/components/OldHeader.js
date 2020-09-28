@@ -11,7 +11,6 @@
 // import Button from '@material-ui/core/Button';
 // import {Link} from 'react-router-dom'
 
-
 // import PropTypes from 'prop-types';
 // import CssBaseline from '@material-ui/core/CssBaseline';
 // import useScrollTrigger from '@material-ui/core/useScrollTrigger';
@@ -58,10 +57,6 @@
 //   );
 // }
 
-
-
-
-
 // const useStyles = makeStyles((theme) => ({
 //   root: {
 //     flexGrow: 1,
@@ -107,11 +102,11 @@
 //             <div>
 //                 { isMobile ? (
 //                 <>
-//                 <IconButton 
-//                      edge="start" 
-//                      className={classes.menuButton} 
-//                      color="inherit" 
-//                      aria-label="menu" 
+//                 <IconButton
+//                      edge="start"
+//                      className={classes.menuButton}
+//                      color="inherit"
+//                      aria-label="menu"
 //                      onClick={handleMenu}
 //                      >
 //                  <MenuIcon />
@@ -136,7 +131,7 @@
 //                      <MenuItem onClick={handleClose} component={Link} to="/">Trucks</MenuItem>
 //                      <MenuItem onClick={handleClose} component={Link} to="/">Why Electrify?</MenuItem>
 //                      <MenuItem onClick={handleClose} component={Link} to="/about/">About</MenuItem>
-//                    </Menu> 
+//                    </Menu>
 //                    </>)
 //                    : (
 //                     <div className={classes.headerOptions}>

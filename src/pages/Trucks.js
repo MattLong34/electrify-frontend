@@ -16,42 +16,43 @@
 //     )
 // }
 
-
-
 import React, { Component } from "react";
-import TrucksCollection from '../components/TrucksCollection'
+import TrucksCollection from "../components/TrucksCollection";
 
-const baseURL = "http://localhost:3000/vehicles"
+const baseURL = "http://localhost:3000/vehicles";
 
 class Trucks extends Component {
-    
-    state = {
-        vehicles: [],
-        trucksArray: [],
-    }
-    
-    componentDidMount() {
-        fetch(baseURL)
-        .then(response => response.json())
-        .then(data => this.setState({
-            trucksArray: data
-        }))
-    }
+	state = {
+		vehicles: [],
+		trucksArray: [],
+	};
 
-    collectTrucks = (vehicle) => {
-        const allTrucks = this.state.vehicles.filter(vehicle => vehicle.category == "truck")
-        this.setState({ 
-          trucksArray: allTrucks
-        })
-    }
-    
-    render() {
-        return <div>
-            Trucks Page
-            <TrucksCollection trucksArray={this.state.trucksArray}/>
+	componentDidMount() {
+		fetch(baseURL)
+			.then((response) => response.json())
+			.then((data) =>
+				this.setState({
+					trucksArray: data,
+				})
+			);
+	}
 
-        </div>
-    }
+	collectTrucks = (vehicle) => {
+		const allTrucks = this.state.vehicles.filter(
+			(vehicle) => vehicle.category == "truck"
+		);
+		this.setState({
+			trucksArray: allTrucks,
+		});
+	};
+
+	render() {
+		return (
+			<div>
+				<TrucksCollection trucksArray={this.state.trucksArray} />
+			</div>
+		);
+	}
 }
 
-export default Trucks
+export default Trucks;
