@@ -12,15 +12,13 @@ import {
 	CardMedia,
 } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
+import CloseIcon from "@material-ui/icons/Close";
 
 const useStyles = makeStyles({
 	root: {
 		maxWidth: 350,
-		// minWidth: 350,
 		borderRadius: 10,
 		padding: 10,
-		// margin: '30px',
-		// flexGrow: 1,
 	},
 	card: {
 		borderRadius: 10,
@@ -30,15 +28,10 @@ const useStyles = makeStyles({
 	},
 	media: {
 		borderRadius: 10,
-		// maxWidth: 310,
-		// minWidth: 310,
 		margin: "auto",
 	},
 	bold: {
 		fontWeight: 800,
-	},
-	button: {
-		// textAlign: "center"
 	},
 	fab: {
 		position: "absolute",
@@ -46,8 +39,12 @@ const useStyles = makeStyles({
 });
 
 export default function CarCard(props) {
-	const { vehicle } = props;
+	const { vehicle, action, iconBoolean } = props;
 	const classes = useStyles();
+
+	function handleClick() {
+		action(vehicle);
+	}
 
 	return (
 		<Grid
@@ -59,10 +56,6 @@ export default function CarCard(props) {
 			sm={6}
 		>
 			<Card elevation={5} className={classes.card}>
-				{/* <Typography gutterBottom variant="h5" component="h2">
-              {vehicle.year} {vehicle.make} {vehicle.model}
-          </Typography> */}
-				{/* <CardActionArea> */}
 				<CardMedia
 					className={classes.media}
 					component="img"
@@ -70,7 +63,6 @@ export default function CarCard(props) {
 					height="140"
 					image={vehicle.link}
 					title={vehicle.model}
-					// justify="center"
 				/>
 				<CardContent>
 					<Typography
@@ -100,15 +92,15 @@ export default function CarCard(props) {
 						<span className={classes.bold}>{vehicle.horsePower}</span>
 					</Typography>
 				</CardContent>
-				{/* </CardActionArea> */}
 				<Grid container justify="flex-end" alignItems="flex-end">
 					<Fab
+						onClick={handleClick}
 						className={classes.fab}
 						size="medium"
-						color="primary"
 						aria-label="add"
+						color={props.color}
 					>
-						<AddIcon />
+						{iconBoolean ? <AddIcon /> : <CloseIcon />}
 					</Fab>
 				</Grid>
 			</Card>

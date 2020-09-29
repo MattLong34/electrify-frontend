@@ -13,7 +13,6 @@ function TrucksCollection(props) {
 				vehicle={truck}
 				action={props.addTruck}
 				trucksCompare={props.trucksCompare}
-				// color={"primary"}
 				color={
 					props.trucksCompare.find((favorite) => favorite.id === truck.id)
 						? "fillInTheBlank"

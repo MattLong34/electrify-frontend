@@ -1,5 +1,5 @@
 import React from "react";
-import TruckCard from "./TruckCard";
+import CarCard from "./CarCard";
 import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -20,15 +20,15 @@ const useStyles = makeStyles({
 	},
 });
 
-function TrucksCompare(props) {
+function CarsCompare(props) {
 	const classes = useStyles();
 
-	const showCompareTrucks = props.trucksCompare.map((truck) => {
+	const showCompareCars = props.carsCompare.map((car) => {
 		return (
-			<TruckCard
-				vehicle={truck}
-				action={props.removeTruck}
-				trucksCompare={props.trucksCompare}
+			<CarCard
+				vehicle={car}
+				action={props.removeCar}
+				carsCompare={props.carsCompare}
 				color="secondary"
 				iconBoolean={false}
 			/>
@@ -38,16 +38,16 @@ function TrucksCompare(props) {
 	return (
 		<div>
 			<Typography className={classes.title} variant="p" color="secondary">
-				Electric Trucks
+				Electric Cars
 			</Typography>
 			<div className={classes.compareBin}>
-				<h2>Add Electric Trucks to Compare</h2>
+				<h2>Add Electric Cars to Compare</h2>
 				<Grid container spacing={6} justify="center">
-					{showCompareTrucks}
+					{showCompareCars}
 				</Grid>
 			</div>
 		</div>
 	);
 }
 
-export default TrucksCompare;
+export default CarsCompare;
