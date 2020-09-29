@@ -12,7 +12,7 @@ function TrucksCollection(props) {
 	);
 
 	const showTrucks = result.map((truck) => {
-		return <TruckCard vehicle={truck} addTruck={props.addTruck} />;
+		return <TruckCard vehicle={truck} action={props.addTruck} />;
 	});
 
 	// collectCars = (vehicle) => {

@@ -43,12 +43,14 @@ class Trucks extends Component {
 		}
 	};
 
-	//   removeFromTrucksCompare = (bot) => {
-	// 		const newArmy = this.state.botArmy.filter(card => card.id !== bot.id)
-	// 		this.setState({
-	// 		  botArmy: newArmy
-	// 		})
-	// 	}
+	removeFromTrucksCompare = (vehicle) => {
+		const newTrucksCompare = this.state.trucksCompare.filter(
+			(card) => card.id !== vehicle.id
+		);
+		this.setState({
+			trucksCompare: newTrucksCompare,
+		});
+	};
 
 	render() {
 		return (
@@ -57,6 +59,7 @@ class Trucks extends Component {
 					trucksArray={this.state.trucksArray}
 					trucksCompare={this.state.trucksCompare}
 					addTruck={this.addToTrucksCompare}
+					removeTruck={this.removeFromTrucksCompare}
 				/>
 				<TrucksCollection
 					trucksArray={this.state.trucksArray}
