@@ -3,24 +3,26 @@ import TruckCard from "./TruckCard";
 import { Grid } from "@material-ui/core";
 
 function TrucksCollection(props) {
-	//   const showCars = props.carsArray.map(car => {
-	//     return <VehicleCard vehicle={car} />
-	// })
-
 	const result = props.trucksArray.filter(
 		(vehicle) => vehicle.category === "truck"
 	);
 
 	const showTrucks = result.map((truck) => {
-		return <TruckCard vehicle={truck} action={props.addTruck} />;
+		return (
+			<TruckCard
+				vehicle={truck}
+				action={props.addTruck}
+				trucksCompare={props.trucksCompare}
+				// color={"primary"}
+				color={
+					props.trucksCompare.find((favorite) => favorite.id === truck.id)
+						? "fillInTheBlank"
+						: "primary"
+				}
+				iconBoolean={true}
+			/>
+		);
 	});
-
-	// collectCars = (vehicle) => {
-	//     const allCars = this.state.allVehicles.filter(vehicle => vehicle.category == "car")
-	//     this.setState({
-	//       carsArray: allCars
-	//     })
-	// }
 
 	return (
 		<div>

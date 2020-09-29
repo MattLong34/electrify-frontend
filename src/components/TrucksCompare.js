@@ -59,7 +59,15 @@ function TrucksCompare(props) {
 	const classes = useStyles();
 
 	const showCompareTrucks = props.trucksCompare.map((truck) => {
-		return <TruckCard vehicle={truck} action={props.removeTruck} />;
+		return (
+			<TruckCard
+				vehicle={truck}
+				action={props.removeTruck}
+				trucksCompare={props.trucksCompare}
+				color="secondary"
+				iconBoolean={false}
+			/>
+		);
 	});
 
 	return (

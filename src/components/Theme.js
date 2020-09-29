@@ -6,19 +6,16 @@ const orange = "#F59300";
 
 export default createMuiTheme({
 	palette: {
-		common: {
-			green: `${lightGreen}`,
-			orange: `${orange}`,
-			darkGreen: `${darkGreen}`,
-		},
+		// common: {
+		// 	green: `${lightGreen}`,
+		// 	orange: `${orange}`,
+		// 	darkGreen: `${darkGreen}`,
+		// },
 		primary: {
 			main: `${lightGreen}`,
 		},
 		secondary: {
 			main: `${orange}`,
-		},
-		tertiary: {
-			main: `${darkGreen}`,
 		},
 	},
 	typography: {

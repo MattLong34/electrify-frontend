@@ -12,6 +12,9 @@ import {
 	CardMedia,
 } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
+import ImportExportIcon from "@material-ui/icons/ImportExport";
+import HighlightOffIcon from "@material-ui/icons/HighlightOff";
+import CloseIcon from "@material-ui/icons/Close";
 
 const useStyles = makeStyles({
 	root: {
@@ -43,10 +46,13 @@ const useStyles = makeStyles({
 	fab: {
 		position: "absolute",
 	},
+	red: {
+		color: "FA0F1B",
+	},
 });
 
 export default function CarCard(props) {
-	const { vehicle, action } = props;
+	const { vehicle, action, trucksCompare, iconBoolean } = props;
 	const classes = useStyles();
 
 	function handleClick() {
@@ -115,10 +121,16 @@ export default function CarCard(props) {
 						// onClick={console.log("test")}
 						className={classes.fab}
 						size="medium"
-						color="primary"
 						aria-label="add"
+						// color="primary"
+						color={props.color}
+						// color={
+						// 	props.trucksCompare.find((favorite) => favorite.id === vehicle.id)
+						// 		? "secondary"
+						// 		: "primary"
+						// }
 					>
-						<AddIcon />
+						{iconBoolean ? <AddIcon /> : <CloseIcon />}
 					</Fab>
 				</Grid>
 			</Card>

@@ -64,6 +64,7 @@ class Trucks extends Component {
 				<TrucksCollection
 					trucksArray={this.state.trucksArray}
 					addTruck={this.addToTrucksCompare}
+					trucksCompare={this.state.trucksCompare}
 				/>
 			</div>
 		);
