@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Typography } from "@material-ui/core";
 import TrucksCollection from "../components/TrucksCollection";
 import TrucksCompare from "../components/TrucksCompare";
 
@@ -52,7 +53,6 @@ class Trucks extends Component {
 	render() {
 		return (
 			<div>
-				<h2>Electric Trucks</h2>
 				<TrucksCompare
 					trucksArray={this.state.trucksArray}
 					trucksCompare={this.state.trucksCompare}

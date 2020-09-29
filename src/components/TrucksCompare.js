@@ -1,6 +1,6 @@
 import React from "react";
 import TruckCard from "./TruckCard";
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
@@ -36,8 +36,22 @@ const useStyles = makeStyles({
 	compareBin: {
 		paddingTop: 10,
 		paddingBottom: 50,
+		marginTop: 30,
 		marginBottom: 30,
-		backgroundColor: "lightGray",
+		backgroundColor: "#B9DFBB",
+	},
+	title: {
+		// position: "relative",
+		// bottom: 650,
+		// left: 350,
+		borderRadius: 10,
+		// marginBottom: 50,
+		padding: 10,
+		fontWeight: 800,
+		fontSize: 32,
+		// color: "#337136",
+		backgroundColor: "#EAEBEA",
+		// border: "1px solid black",
 	},
 });
 
@@ -50,6 +64,9 @@ function TrucksCompare(props) {
 
 	return (
 		<div>
+			<Typography className={classes.title} variant="p" color="secondary">
+				Electric Trucks
+			</Typography>
 			<div className={classes.compareBin}>
 				<h2>Add Electric Trucks to Compare</h2>
 				<Grid container spacing={6} justify="center">
