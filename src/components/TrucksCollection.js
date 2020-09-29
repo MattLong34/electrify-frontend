@@ -12,7 +12,7 @@ function TrucksCollection(props) {
 	);
 
 	const showTrucks = result.map((truck) => {
-		return <TruckCard vehicle={truck} />;
+		return <TruckCard vehicle={truck} addTruck={props.addTruck} />;
 	});
 
 	// collectCars = (vehicle) => {
@@ -25,7 +25,6 @@ function TrucksCollection(props) {
 	return (
 		<div>
 			<div>
-				<h2>Electric Trucks</h2>
 				<Grid container spacing={6} justify="center">
 					{showTrucks}
 				</Grid>

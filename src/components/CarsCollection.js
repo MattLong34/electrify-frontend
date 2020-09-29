@@ -27,12 +27,12 @@ function CarsCollection(props) {
 			<div>
 				<div>
 					<h2>Electric Cars</h2>
-					<h4>Add cars to compare them!</h4>
+					{/* <h4>Add cars to compare them!</h4>
 					<h5>
 						Grid with gray (light orange? light green?) background, adding cars
 						populates them here, plus button turns into red x button, need a
 						clear all button as well.
-					</h5>
+					</h5> */}
 				</div>
 				<Grid container spacing={6} justify="center">
 					{showCars}

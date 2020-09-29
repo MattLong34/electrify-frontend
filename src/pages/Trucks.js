@@ -1,23 +1,6 @@
-// import React from 'react'
-// // import Hero from '../components/Hero'
-// // import Banner from '../components/Banner'
-// // import {Link} from 'react-router-dom'
-// // import Resources from '../components/Resources'
-// // import FeaturedTrails from '../components/FeaturedTrails'
-
-// import TeslaCyberTruck from '../assets/TeslaCyberTruck.jpeg'
-
-// export default function Trucks() {
-//     return (
-//     <div>
-//         <h2>Trucks Page</h2>
-//         <img src={TeslaCyberTruck} />
-//     </div>
-//     )
-// }
-
 import React, { Component } from "react";
 import TrucksCollection from "../components/TrucksCollection";
+import TrucksCompare from "../components/TrucksCompare";
 
 const baseURL = "http://localhost:3000/vehicles";
 
@@ -25,6 +8,7 @@ class Trucks extends Component {
 	state = {
 		vehicles: [],
 		trucksArray: [],
+		trucksCompare: [],
 	};
 
 	componentDidMount() {
@@ -46,10 +30,38 @@ class Trucks extends Component {
 		});
 	};
 
+	addToTrucksCompare = (vehicle) => {
+		if (
+			!this.state.trucksCompare.find(
+				(currentTruck) => currentTruck.id === vehicle.id
+			)
+		) {
+			this.setState({
+				trucksCompare: [...this.state.trucksCompare, vehicle],
+			});
+		}
+	};
+
+	//   removeFromTrucksCompare = (bot) => {
+	// 		const newArmy = this.state.botArmy.filter(card => card.id !== bot.id)
+	// 		this.setState({
+	// 		  botArmy: newArmy
+	// 		})
+	// 	}
+
 	render() {
 		return (
 			<div>
-				<TrucksCollection trucksArray={this.state.trucksArray} />
+				<h2>Electric Trucks</h2>
+				<TrucksCompare
+					trucksArray={this.state.trucksArray}
+					trucksCompare={this.state.trucksCompare}
+					addTruck={this.addToTrucksCompare}
+				/>
+				<TrucksCollection
+					trucksArray={this.state.trucksArray}
+					addTruck={this.addToTrucksCompare}
+				/>
 			</div>
 		);
 	}

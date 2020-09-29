@@ -1,4 +1,7 @@
 import React from "react";
+import { Typography } from "@material-ui/core";
+import CostChart from "../components/CostChart";
+
 // import Hero from '../components/Hero'
 // import Banner from '../components/Banner'
 // import {Link} from 'react-router-dom'
@@ -8,7 +11,11 @@ import React from "react";
 export default function WhyEV() {
 	return (
 		<div>
-			<h3>Why Electric Vehicles?</h3>
+			<Typography variant="h4" color="">
+				Why Electric Vehicles?
+			</Typography>
+			<CostChart></CostChart>
+
 			<p>
 				Even though electric cars are receiving more positive attention and
 				becoming more common, adoption is slow. This is typical of any new

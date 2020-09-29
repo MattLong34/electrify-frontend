@@ -160,7 +160,7 @@ export default function Header(props) {
 						/>
 					</Tabs>
 
-					<Button
+					{/* <Button
 						className={classes.tabButton}
 						variant="contained"
 						color="primary"
@@ -168,7 +168,7 @@ export default function Header(props) {
 						to="/compare/"
 					>
 						Compare EV's
-					</Button>
+					</Button> */}
 
 					{/* <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}></Button> */}
 					{/* <MenuIcon /> */}

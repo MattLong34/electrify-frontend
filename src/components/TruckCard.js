@@ -46,8 +46,12 @@ const useStyles = makeStyles({
 });
 
 export default function CarCard(props) {
-	const { vehicle } = props;
+	const { vehicle, addTruck } = props;
 	const classes = useStyles();
+
+	function handleAdd() {
+		addTruck(vehicle);
+	}
 
 	return (
 		<Grid
@@ -107,6 +111,8 @@ export default function CarCard(props) {
 				{/* </CardActionArea> */}
 				<Grid container justify="flex-end" alignItems="flex-end">
 					<Fab
+						onClick={handleAdd}
+						// onClick={console.log("test")}
 						className={classes.fab}
 						size="medium"
 						color="primary"
