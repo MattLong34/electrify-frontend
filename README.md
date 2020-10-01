@@ -24,7 +24,7 @@ Dive in and find the perfect Electric Vehicle for you! The world is surging forw
 
 ## Sneak Peek
 
-[Electrify Image](./assets/ElectrifyScreenshot.png)
+![Electrify Image](./assets/ElectrifyScreenshot.png)
 
 ## Intro Video
 
