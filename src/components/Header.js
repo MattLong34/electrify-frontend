@@ -1,24 +1,19 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import Box from "@material-ui/core/Box";
-import Container from "@material-ui/core/Container";
-import Fab from "@material-ui/core/Fab";
-import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
-import Zoom from "@material-ui/core/Zoom";
-import Button from "@material-ui/core/Button";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+import React, { useState } from "react";
+import {
+	AppBar,
+	Toolbar,
+	CssBaseline,
+	useScrollTrigger,
+	Fab,
+	Zoom,
+	Menu,
+	MenuItem,
+	Tabs,
+	Tab,
+} from "@material-ui/core";
 import { Link } from "react-router-dom";
-import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/styles";
-import Tabs from "@material-ui/core/tabs";
-import Tab from "@material-ui/core/tab";
-
+import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import logo from "../assets/logo.png";
 
 const useStyles = makeStyles((theme) => ({
@@ -85,25 +80,6 @@ export default function Header(props) {
 		setValue(0);
 	};
 
-	// useEffect(() => {
-	//   if (window.location.pathname === '/' && value !== 0) {
-	//     setValue(0)
-	//   } else if (window.location.pathname === '/cars' && value !== 1) {
-	//     setValue(1)
-	//   } else if (window.location.pathname === '/trucks' && value !== 2) {
-	//     setValue(2)
-	//   } else if (window.location.pathname === '/why-ev' && value !== 3) {
-	//     setValue(3)
-	//   } else if (window.location.pathname === '/about' && value !== 4) {
-	//     setValue(4)
-	//   }
-	// }, [value])
-
-	// let test = "primary"
-	// function clearChange() {
-	//   let test = "primary"
-	// }
-
 	const [anchorEl, setAnchorEl] = React.useState(null);
 
 	const handleClick = (event) => {
@@ -160,18 +136,6 @@ export default function Header(props) {
 						/>
 					</Tabs>
 
-					{/* <Button
-						className={classes.tabButton}
-						variant="contained"
-						color="primary"
-						component={Link}
-						to="/compare/"
-					>
-						Compare EV's
-					</Button> */}
-
-					{/* <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}></Button> */}
-					{/* <MenuIcon /> */}
 					<Menu
 						id="simple-menu"
 						anchorEl={anchorEl}

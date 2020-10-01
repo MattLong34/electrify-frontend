@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Typography } from "@material-ui/core";
 import TrucksCollection from "../components/TrucksCollection";
 import TrucksCompare from "../components/TrucksCompare";
 
@@ -24,7 +23,7 @@ class Trucks extends Component {
 
 	collectTrucks = (vehicle) => {
 		const allTrucks = this.state.vehicles.filter(
-			(vehicle) => vehicle.category == "truck"
+			(vehicle) => vehicle.category === "truck"
 		);
 		this.setState({
 			trucksArray: allTrucks,

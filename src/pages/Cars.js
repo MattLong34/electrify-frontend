@@ -23,7 +23,7 @@ class Cars extends Component {
 
 	collectCars = (vehicle) => {
 		const allCars = this.state.allVehicles.filter(
-			(vehicle) => vehicle.category == "car"
+			(vehicle) => vehicle.category === "car"
 		);
 		this.setState({
 			carsArray: allCars,
