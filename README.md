@@ -4,7 +4,8 @@
 
 ## Table of Contents
 
-- [General info](#general-info)
+- [General Info](#general-info)
+- [Sneak Peek](#sneak-peek)
 - [Intro Video](#intro-video)
 - [Technologies](#technologies)
 - [Setup](#setup)
@@ -20,6 +21,10 @@
 Electrify is a full-stack application that allows the user to find and compare Electric Vehicles! A user can view electric cars and trucks currently on the market as well as those coming soon and compare them side-by-side.
 
 Dive in and find the perfect Electric Vehicle for you! The world is surging forward. Are you?
+
+## Sneak Peek
+
+[Electrify Image](./assets/ElectrifyScreenshot.png)
 
 ## Intro Video
 
