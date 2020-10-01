@@ -13,7 +13,7 @@
 - [Contact](#contact)
 - [License](#license)
 
-## General info
+## General Info
 
 Electrify is a full-stack application that allows the user to find and compare Electric Vehicles! A user can view electric cars and trucks currently on the market as well as those coming soon and compare them side-by-side.
 
@@ -40,17 +40,12 @@ Dive in and find the perfect Electric Vehicle for you! The world is surging forw
 
 To have full access to all the features in this application:
 
-1. Clone both the frontend (https://github.com/MattLong34/electrify-frontend) and the backend (https://github.com/MattLong34/electrify-backend) GitHub repositories locally to your computer
-1. In the command line of the backend directory, run:
-   $ rails db:migrate
-   $ rails db:seed
+1. Clone both the frontend (https://github.com/MattLong34/electrify-frontend) and the backend (https://github.com/MattLong34/electrify-backend) repositories locally to your computer
+1. In the command line of your backend directory, run:
+   $ rails db:migrate and $ rails db:seed
 1. Now save all files, on Windows: (start + alt + s), on Macs: (command + alt +s)
-1. In the command of the backend directory, run:
-   $ rails s 
-    $ this will start your backend server
-1. Now in the command of the frontend directory, run:
-   $ npm start
-   $ this should automatically open a new broswer with the web application on it
+1. In the command line of the backend directory, run \$ rails s to start your backend server
+1. In the command line of the frontend directory run \$ npm start to open the web application in a new broswer tab
 
 ## Code Examples
 
@@ -147,4 +142,4 @@ Feel free to contact me with any questions or suggestions!
 
 ## License
 
-[Click to view]()
+[Click to view](https://github.com/MattLong34/electrify-frontend/blob/master/LICENSE.md)
