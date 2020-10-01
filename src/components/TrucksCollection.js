@@ -15,7 +15,7 @@ function TrucksCollection(props) {
 				trucksCompare={props.trucksCompare}
 				color={
 					props.trucksCompare.find((favorite) => favorite.id === truck.id)
-						? "fillInTheBlank"
+						? "gray"
 						: "primary"
 				}
 				iconBoolean={true}
