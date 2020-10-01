@@ -25,7 +25,6 @@ class Cars extends Component {
 		const allCars = this.state.allVehicles.filter(
 			(vehicle) => vehicle.category == "car"
 		);
-		// const allCars = this.state.carsArray.filter(vehicle => vehicle.category == "car")
 		this.setState({
 			carsArray: allCars,
 		});

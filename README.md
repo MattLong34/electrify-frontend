@@ -1,68 +1,150 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Electrify
 
-## Available Scripts
+> Find and compare Electric Vehicles!
 
-In the project directory, you can run:
+## Table of contents
 
-### `yarn start`
+- [General info](#general-info)
+- [Intro Video](#intro-video)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Features](#features)
+- [Inspiration](#inspiration)
+- [Contact](#contact)
+- [License](#license)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## General info
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Electrify is a full-stack application that allows the user to find and compare Electric Vehicles! A user can view electric cars and trucks currently on the market as well as those coming soon and compare them side-by-side.
 
-### `yarn test`
+Dive in and find the perfect Electric Vehicle for you! The world is surging forward. Are you?
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Intro Video
 
-### `yarn build`
+[Electrify on YouTube]()
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- HTML5
+- CSS
+- JavaScript
+- React
+- Flaticon
+- Animista
+- Ruby
+- Rails
+- ActiveRecord
+- Sqlite3
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup
 
-### `yarn eject`
+To have full access to all the features in this application:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone both the frontend (https://github.com/MattLong34/electrify-frontend) and the backend (https://github.com/MattLong34/electrify-backend) GitHub repositories locally to your computer
+1. In the command line of the backend directory, run:
+   $ rails db:migrate
+   $ rails db:seed
+1. Now save all files, on Windows: (start + alt + s), on Macs: (command + alt +s)
+1. In the command of the backend directory, run:
+   $ rails s 
+    $ this will start your backend server
+1. Now in the command of the frontend directory, run:
+   $ npm start
+   $ this should automatically open a new broswer with the web application on it
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Code Examples
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```javaScript
+class Cars extends Component {
+	state = {
+		allVehicles: [],
+		carsArray: [],
+		carsCompare: [],
+	};
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+	componentDidMount() {
+		fetch(baseURL)
+			.then((response) => response.json())
+			.then((data) =>
+				this.setState({
+					carsArray: data,
+				})
+			);
+	}
 
-## Learn More
+	collectCars = (vehicle) => {
+		const allCars = this.state.allVehicles.filter(
+			(vehicle) => vehicle.category == "car"
+		);
+		this.setState({
+			carsArray: allCars,
+		});
+	};
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```javascript
+function CarsCollection(props) {
+	const result = props.carsArray.filter(
+		(vehicle) => vehicle.category === "car"
+	);
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+	const showCars = result.map((car) => {
+		return (
+			<CarCard
+				vehicle={car}
+				action={props.addCar}
+				carsCompare={props.carsCompare}
+				color={
+					props.carsCompare.find((favorite) => favorite.id === car.id)
+						? "fillInTheBlank"
+						: "primary"
+				}
+				iconBoolean={true}
+			/>
+		);
+	});
 
-### Code Splitting
+	return (
+		<div>
+			<div>
+				<Grid container spacing={6} justify="center">
+					{showCars}
+				</Grid>
+			</div>
+		</div>
+	);
+}
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Features
 
-### Analyzing the Bundle Size
+- View electric cars and trucks currently on the market
+- View electric cars and trucks coming to market soon
+- Compare electric vehicles and their stats side-by-side to find the right fit for you
+- Fully responsive web-app that looks clean on all devices
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Status
 
-### Making a Progressive Web App
+Version 1.0 is complete and will be deployed soon.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Future versions may include an expanded vehicle inventory, vehicle sort features, and UI/UX improvements.
 
-### Advanced Configuration
+## Inspiration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+The inspiration for Electrify came from my personal interest in Electric Vehicles. EV's offer better performance and long term cost of ownership as compared to most fossil-fuel powered vehicles. Largescale EV adoption is also a massively important step in protecting the environment while also utilizing modern technology and transportation.
 
-### Deployment
+I built Electrify after identifying that there are very few quality resources for finding and comparing Electric Vehicles. Many EV's are still a few years away from coming to market (as of 2020), and thus they do not show up on many current car websites.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Electify is designed to be a tool that aids you in your journey of finding and comparing Electric Vehicles, whether they are currently on sale or coming to market soon.
 
-### `yarn build` fails to minify
+I hope that you find using Electrify to be enjoyable and helpful!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Contact
+
+[Matt Long](https://www.linkedin.com/in/mattlong34/)
+
+Feel free to contact me with any questions or suggestions!
+
+## License
+
+[Click to view]()
