@@ -5,7 +5,7 @@
 ## Table of Contents
 
 - [General Info](#general-info)
-- [Sneak Peek](#sneak-peek)
+<!-- - [Sneak Peek](#sneak-peek) -->
 - [Intro Video](#intro-video)
 - [Technologies](#technologies)
 - [Setup](#setup)
@@ -22,9 +22,9 @@ Electrify is a full-stack application that allows the user to find and compare E
 
 Dive in and find the perfect Electric Vehicle for you! The world is surging forward. Are you?
 
-## Sneak Peek
+<!-- ## Sneak Peek
 
-![Electrify Image](https://github.com/MattLong34/electrify-frontend/src/assets/ElectrifyScreenshot.png)
+![Electrify Image](https://github.com/MattLong34/electrify-frontend/src/assets/ElectrifyScreenshot.png) -->
 
 ## Intro Video
 
