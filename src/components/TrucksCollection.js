@@ -25,11 +25,9 @@ function TrucksCollection(props) {
 
 	return (
 		<div>
-			<div>
-				<Grid container spacing={6} justify="center">
-					{showTrucks}
-				</Grid>
-			</div>
+			<Grid container spacing={6} justify="center">
+				{showTrucks}
+			</Grid>
 		</div>
 	);
 }

@@ -2,13 +2,15 @@
 
 > Find and compare Electric Vehicles!
 
-## Table of contents
+## Table of Contents
 
 - [General info](#general-info)
 - [Intro Video](#intro-video)
 - [Technologies](#technologies)
 - [Setup](#setup)
+- [Code Examples](#code-examples)
 - [Features](#features)
+- [Status](#status)
 - [Inspiration](#inspiration)
 - [Contact](#contact)
 - [License](#license)
@@ -101,11 +103,9 @@ function CarsCollection(props) {
 
 	return (
 		<div>
-			<div>
-				<Grid container spacing={6} justify="center">
-					{showCars}
-				</Grid>
-			</div>
+			<Grid container spacing={6} justify="center">
+				{showCars}
+			</Grid>
 		</div>
 	);
 }
