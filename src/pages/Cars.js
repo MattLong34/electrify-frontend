@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import CarsCollection from "../components/CarsCollection";
 import CarsCompare from "../components/CarsCompare";
 
-const baseURL = "http://localhost:3000/vehicles";
+const baseURL = "https://electrify-backend.herokuapp.com/vehicles";
 
 class Cars extends Component {
 	state = {
