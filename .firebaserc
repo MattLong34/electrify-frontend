@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "electrify-bc422"
+    "default": "electrify-bc422",
+    "development": "get-electrified"
   }
 }

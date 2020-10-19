@@ -128,12 +128,12 @@ export default function Header(props) {
 							component={Link}
 							to="/why-ev/"
 						/>
-						<Tab
+						{/* <Tab
 							className={classes.tab}
 							label="About Us"
 							component={Link}
 							to="/about/"
-						/>
+						/> */}
 					</Tabs>
 
 					<Menu
