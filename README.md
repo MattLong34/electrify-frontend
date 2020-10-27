@@ -27,7 +27,7 @@ Dive in and find the perfect Electric Vehicle for you! The world is surging forw
 
 ## Intro Video
 
-[Electrify on YouTube]()
+[Electrify on YouTube](https://youtu.be/nzWYBCkjfmE)
 
 ## Technologies
 
@@ -35,12 +35,12 @@ Dive in and find the perfect Electric Vehicle for you! The world is surging forw
 - CSS
 - JavaScript
 - React
+- Material UI
 - Flaticon
 - Animista
 - Ruby
 - Rails
-- ActiveRecord
-- Sqlite3
+- PostgreSQL
 
 ## Setup
 
